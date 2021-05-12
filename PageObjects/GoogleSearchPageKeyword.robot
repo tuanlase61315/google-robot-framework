@@ -9,6 +9,7 @@ Open Google Search Website
     [Arguments]     ${url}     ${browser}
     open page  ${url}     ${browser}
 
+
 Input Value into Search Textbox
     [Arguments]  ${inputValue}
     wait and input text  ${search_textbox}      ${inputValue}

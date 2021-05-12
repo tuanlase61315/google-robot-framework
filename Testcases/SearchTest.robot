@@ -22,10 +22,6 @@ Google Search
     [Arguments]  ${seachID}  ${seachValue}      ${resultText}
     Input Value into Search Textbox  ${seachValue}
     Press Enter Keyboard
-    sleep  3
+    sleep  1
     RUN KEYWORD IF  '${seachID}' == '3'     Verify search result is not displayed
     ...     ELSE       Verify search result is displayed    ${resultText}
-
-
-
-

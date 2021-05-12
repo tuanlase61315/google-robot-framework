@@ -6,6 +6,7 @@ open page
     [Arguments]  ${url}     ${browser}
     open browser  ${url}     ${browser}
     maximize browser window
+    set selenium implicit wait  5 seconds
 
 wait and input text
     [Arguments]  ${locator}     ${inputValue}
@@ -25,4 +26,5 @@ verify text is displayed
 
 verify text is not displayed
     [Arguments]  ${locator}
+    wait until element is not visible  ${locator}
     page should not contain element  ${locator}
